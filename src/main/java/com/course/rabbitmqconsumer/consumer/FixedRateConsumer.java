@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class FixedRateConsumer {
 
     @RabbitListener(queues = "course.fixedrate", concurrency = "3")
-    public void listener(String message) throws InterruptedException {
+    public void listener(final String message) throws InterruptedException {
         Thread.sleep(ThreadLocalRandom.current().nextInt(2000));
         System.out.println(Thread.currentThread().getName() + "Consuming: " + message);
     }
