@@ -12,8 +12,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * Represents RabbitMQ Header. Tested on RabbitMQ 3.7.x.
- *
- * @author timpamungkas
  */
 
 @Getter
